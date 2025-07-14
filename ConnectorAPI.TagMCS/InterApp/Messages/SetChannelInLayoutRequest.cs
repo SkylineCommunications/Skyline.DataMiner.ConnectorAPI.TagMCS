@@ -31,6 +31,13 @@ namespace Skyline.DataMiner.ConnectorAPI.TagMCS.InterApp.Messages
         /// </summary>
         public int Position { get; set; }
 
+        /// <summary>
+        /// Constructor for the Request
+        /// </summary>
+        /// <param name="layout"></param>
+        /// <param name="channel"></param>
+        /// <param name="position"></param>
+        /// <param name="messageIdentifier"></param>
         public SetChannelInLayoutRequest(string layout, string channel, int position, MessageIdentifier messageIdentifier = MessageIdentifier.ID)
         {
             this.Layout = layout;

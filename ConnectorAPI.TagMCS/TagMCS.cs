@@ -29,6 +29,9 @@ namespace Skyline.DataMiner.ConnectorAPI.TagMCS
         Name = 1,
     }
 
+    /// <summary>
+	///     Represents a TAG MCS Element that allows to interface with it's API through Inter App messages.
+	/// </summary>
     public class TagMCS
     {
         private const int InterAppReceiverPid = 9000000;
