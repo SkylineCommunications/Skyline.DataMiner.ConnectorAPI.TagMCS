@@ -3,8 +3,8 @@
     <TargetFramework>net462</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
-    <AssemblyName>Skyline.DataMiner.ConnectorAPI.TagMCS</AssemblyName>
-    <RootNamespace>Skyline.DataMiner.ConnectorAPI.TagMCS</RootNamespace>
+    <AssemblyName>Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS</AssemblyName>
+    <RootNamespace>Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS</RootNamespace>
     <PackageVersion>1.0.1</PackageVersion>
     <Version>1.0.1</Version>
     <PackageTags>Skyline;DataMiner</PackageTags>

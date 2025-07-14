@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Skyline.DataMiner.Core.InterAppCalls.Common.CallSingle;
 
-namespace Skyline.DataMiner.ConnectorAPI.TagMCS.InterApp.Messages
+namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.InterApp.Messages
 {
     /// <summary>
     /// Basic InterApp Response containing the Success of the request and a Response Message containing any additional information

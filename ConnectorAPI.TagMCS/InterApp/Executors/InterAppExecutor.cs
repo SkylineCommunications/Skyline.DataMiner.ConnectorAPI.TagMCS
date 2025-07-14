@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Skyline.DataMiner.ConnectorAPI.TagMCS.InterApp.Messages;
+using Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.InterApp.Messages;
 using Skyline.DataMiner.Core.InterAppCalls.Common.CallSingle;
 using Skyline.DataMiner.Core.InterAppCalls.Common.MessageExecution;
 
-namespace Skyline.DataMiner.ConnectorAPI.TagMCS.InterApp.Executors
+namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.InterApp.Executors
 {
     /// <summary>
     /// Executor for the <see cref="InterAppResponse"/> message.

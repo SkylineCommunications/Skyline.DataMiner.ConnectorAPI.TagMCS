@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Skyline.DataMiner.ConnectorAPI.TagMCS.InterApp.Messages
+namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.InterApp.Messages
 {
     using Skyline.DataMiner.Core.InterAppCalls.Common.CallSingle;
 

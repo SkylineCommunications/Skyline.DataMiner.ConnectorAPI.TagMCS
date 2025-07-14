@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using Skyline.DataMiner.ConnectorAPI.TagMCS.InterApp.Executors;
-using Skyline.DataMiner.ConnectorAPI.TagMCS.InterApp.Messages;
+using Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.InterApp.Executors;
+using Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.InterApp.Messages;
 using Skyline.DataMiner.Core.DataMinerSystem.Common;
 using Skyline.DataMiner.Core.DataMinerSystem.Common.Selectors;
 using Skyline.DataMiner.Core.InterAppCalls.Common.CallBulk;
@@ -12,7 +12,7 @@ using Skyline.DataMiner.Core.InterAppCalls.Common.MessageExecution;
 using Skyline.DataMiner.Core.InterAppCalls.Common.Shared;
 using Skyline.DataMiner.Net;
 
-namespace Skyline.DataMiner.ConnectorAPI.TagMCS
+namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
 {
     /// <summary>
     /// Enum for specifying what type of information you are passing to the message for the Channel/Layout.
