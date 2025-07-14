@@ -19,7 +19,7 @@
     <Company>Skyline Communications</Company>
     <Description></Description>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/SkylineCommunications/SLC-S-TagMCS-ConnectorAPI</RepositoryUrl>
+    <RepositoryUrl>https://github.com/SkylineCommunications/SLC-S-TAG-MCS-ConnectorAPI</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
