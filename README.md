@@ -1,7 +1,7 @@
 # Skyline.DataMiner.ConnectorAPI.TagMCS
 
 ## About
-
+This solution holds the connector API (Inter-App Calls and Messages) to communicate with any DataMiner element running the 'Tag Video Systems Media Controller System(MCS)' connector.
 
 
 ## Projects
