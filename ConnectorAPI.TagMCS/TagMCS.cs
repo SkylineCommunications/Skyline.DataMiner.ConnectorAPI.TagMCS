@@ -39,7 +39,6 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
 
         private readonly IConnection _connection;
         private readonly IDmsElement _element;
-        private TimeSpan timeout;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TagMCS" /> class.
@@ -87,23 +86,12 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
         };
 
         /// <summary>
-		///     Maximum amount of time in which every request to the chassis should be handled.<br />
-		///     Default: 10 seconds.<br />
-		///     Maximum: 2 minutes.<br />
-		/// </summary>
-        public TimeSpan Timeout
-        {
-            get => timeout;
-            set => timeout = value <= TimeSpan.FromSeconds(120) ? value : TimeSpan.FromSeconds(120);
-        }
-
-        /// <summary>
         /// Send the message to the Tag MCS Element
         /// </summary>
         /// <param name="message">The message to send to the Tag MCS</param>
         /// <param name="logger">Optional Logger functionality</param>
         /// <returns></returns>
-        public InterAppResponse SendMessage(Message message, Action<string> logger = null)
+        public InterAppResponse SendMessage(Message message, TimeSpan timeout, Action<string> logger = null)
         {
             try
             {
