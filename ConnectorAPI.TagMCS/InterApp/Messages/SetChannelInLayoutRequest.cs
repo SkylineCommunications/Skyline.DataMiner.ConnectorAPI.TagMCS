@@ -38,7 +38,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.InterApp.Messages
         /// <param name="channel"></param>
         /// <param name="position"></param>
         /// <param name="messageIdentifier"></param>
-        public SetChannelInLayoutRequest(string layout, string channel, int position, MessageIdentifier messageIdentifier = MessageIdentifier.ID)
+        public SetChannelInLayoutRequest(string layout, string channel, int position, MessageIdentifier messageIdentifier)
         {
             this.Layout = layout;
             this.Channel = channel;

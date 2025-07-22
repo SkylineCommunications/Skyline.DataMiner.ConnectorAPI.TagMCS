@@ -1,30 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
-using Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.InterApp.Executors;
 using Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.InterApp.Messages;
 using Skyline.DataMiner.Core.DataMinerSystem.Common;
-using Skyline.DataMiner.Core.DataMinerSystem.Common.Selectors;
 using Skyline.DataMiner.Core.InterAppCalls.Common.CallBulk;
 using Skyline.DataMiner.Core.InterAppCalls.Common.CallSingle;
-using Skyline.DataMiner.Core.InterAppCalls.Common.MessageExecution;
 using Skyline.DataMiner.Core.InterAppCalls.Common.Shared;
 using Skyline.DataMiner.Net;
 
 namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
 {
     /// <summary>
-    /// Enum for specifying what type of information you are passing to the message for the Channel/Layout.
+    /// Enum for specifying what type of information the message will contain.
     /// </summary>
     public enum MessageIdentifier
     {
         /// <summary>
-        /// ID will mean that you are passing the Id of the Channel/Layout
+        /// ID will mean that the message only uses IDs.
         /// </summary>
         ID = 0,
         /// <summary>
-        /// Name will mean that you are passing the Name of the Channel/Layout
+        /// Name will mean that the message only uses Names.
         /// </summary>
         Name = 1,
     }
@@ -64,6 +60,11 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
             {
                 throw new ElementStoppedException($"Element {_element.Name} is not active");
             }
+
+            if (!HasParameter(_element, InterAppReceiverPid))
+            {
+                throw new InvalidVersionException($"Element {_element.Name} is not using a version where InterApp is implemented");
+            }
         }
 
         /// <summary>
@@ -82,50 +83,50 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
 		/// </summary>
         public static Dictionary<Type, Type> ExecutorMapping { get; } = new Dictionary<Type, Type>
         {
-            { typeof(InterAppResponse), typeof(InterAppExecutor) }
         };
 
         /// <summary>
         /// Send the message to the Tag MCS Element
         /// </summary>
         /// <param name="message">The message to send to the Tag MCS</param>
-        /// <param name="logger">Optional Logger functionality</param>
         /// <returns></returns>
-        public InterAppResponse SendMessage(Message message, TimeSpan timeout, Action<string> logger = null)
+        public InterAppResponse SendMessage(Message message, TimeSpan timeout)
         {
             try
             {
                 IInterAppCall commands = InterAppCallFactory.CreateNew();
                 commands.Messages.Add(message);
-                commands.Source = new Source("AppearX_Element");
+                commands.Source = new Source("TagMCS_Element");
                 commands.ReturnAddress = new ReturnAddress(_element.AgentId, _element.Id, InterAppSenderPid);
 
                 Message returnedMessage = commands.Send(_connection, _element.AgentId, _element.Id, InterAppReceiverPid, timeout, KnownTypes).FirstOrDefault();
                 if (returnedMessage == null)
                 {
-                    logger?.Invoke($"{_element.Name}|{nameof(SendMessage)}|Received response was null...");
                     return new InterAppResponse { Success = false, ResponseMessage = "No InterApp response received." };
                 }
 
-                IMessageExecutor executor = returnedMessage.CreateExecutor(ExecutorMapping);
-                bool status = executor.Validate();
-
-                logger?.Invoke(
-                    status
-                        ? $"{_element.Name}|Response status: OK, message: {executor}"
-                : $"{_element.Name}|Response status: FAIL, message: {executor}");
-
-                return new InterAppResponse { Success = status, ResponseMessage = executor.ToString() };
+                return returnedMessage as InterAppResponse;
             }
             catch (TimeoutException)
             {
-                logger?.Invoke($"{_element.Name}|{nameof(SendMessage)}|Message timed out...");
                 return new InterAppResponse { Success = false, ResponseMessage = "Message Timed out..." };
             }
             catch (Exception e)
             {
-                logger?.Invoke($"{_element.Name}|{nameof(SendMessage)}|Exception: {e}");
                 return new InterAppResponse { Success = false, ResponseMessage = e.ToString() };
+            }
+        }
+
+        private static bool HasParameter(IDmsElement element, int pid)
+        {
+            try
+            {
+                element.GetStandaloneParameter<string>(pid).GetValue();
+                return true;
+            }
+            catch(Exception)
+            {
+                return false;
             }
         }
     }
