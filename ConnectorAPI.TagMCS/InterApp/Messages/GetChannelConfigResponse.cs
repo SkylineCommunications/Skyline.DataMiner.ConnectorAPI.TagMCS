@@ -6,11 +6,12 @@
     using System.Text;
     using System.Threading.Tasks;
     using QAction_1.API_Models;
+    using Skyline.DataMiner.Core.InterAppCalls.Common.CallSingle;
 
     /// <summary>
     /// Message containing the response for the Get Channel Config Request
     /// </summary>
-    public class GetChannelConfigResponse
+    public class GetChannelConfigResponse : Message
     {
         /// <summary>
         /// Contains the boolean value on whether the request succeeded or not
