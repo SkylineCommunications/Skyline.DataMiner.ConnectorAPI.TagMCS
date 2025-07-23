@@ -1,11 +1,11 @@
 ﻿#pragma warning disable S4004 // Collection properties should be readonly
 #pragma warning disable CS1591 // XML Comments
-namespace QAction_1.API_Models
+namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 {
 	using System;
 	using System.Collections.Generic;
 	using Newtonsoft.Json;
-	using QAction_1.HelperClasses;
+	using Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.HelperClasses;
 
 	public class ChannelMonitoring
 	{

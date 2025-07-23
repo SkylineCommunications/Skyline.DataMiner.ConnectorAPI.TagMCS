@@ -1,5 +1,5 @@
 ﻿#pragma warning disable CS1591 // XML Comments
-namespace QAction_1.HelperClasses
+namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.HelperClasses
 {
 	using System;
 	using Newtonsoft.Json;
