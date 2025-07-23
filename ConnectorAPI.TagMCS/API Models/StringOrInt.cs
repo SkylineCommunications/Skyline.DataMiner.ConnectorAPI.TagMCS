@@ -1,4 +1,5 @@
-﻿namespace QAction_1.HelperClasses
+﻿#pragma warning disable CS1591 // XML Comments
+namespace QAction_1.HelperClasses
 {
 	using System;
 	using Newtonsoft.Json;

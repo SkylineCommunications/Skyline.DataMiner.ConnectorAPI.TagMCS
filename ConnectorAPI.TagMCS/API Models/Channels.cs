@@ -1,4 +1,5 @@
 ﻿#pragma warning disable S4004 // Collection properties should be readonly
+#pragma warning disable CS1591 // XML Comments
 namespace QAction_1.API_Models
 {
 	using System;
@@ -19,9 +20,6 @@ namespace QAction_1.API_Models
 	{
 		[JsonProperty("data")]
 		public List<Channel> Data { get; set; }
-
-		[JsonProperty("metadata")]
-		public Metadata Metadata { get; set; }
 	}
 
 	public class Channel

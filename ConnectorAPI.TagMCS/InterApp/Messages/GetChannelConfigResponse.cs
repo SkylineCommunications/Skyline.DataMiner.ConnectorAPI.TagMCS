@@ -7,6 +7,9 @@
     using System.Threading.Tasks;
     using QAction_1.API_Models;
 
+    /// <summary>
+    /// Message containing the response for the Get Channel Config Request
+    /// </summary>
     public class GetChannelConfigResponse
     {
         /// <summary>
