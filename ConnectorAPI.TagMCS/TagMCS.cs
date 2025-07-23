@@ -75,6 +75,9 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
         {
             typeof(SetChannelInLayoutRequest),
             typeof(InterAppResponse),
+            typeof(GetChannelConfigRequest),
+            typeof(GetChannelConfigResponse),
+            typeof(SetChannelConfigRequest),
         };
 
         /// <summary>
@@ -90,7 +93,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
         /// </summary>
         /// <param name="message">The message to send to the Tag MCS</param>
         /// <returns></returns>
-        public InterAppResponse SendMessage(Message message, TimeSpan timeout)
+        public Message SendMessage(Message message, TimeSpan timeout)
         {
             try
             {
@@ -105,7 +108,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
                     return new InterAppResponse { Success = false, ResponseMessage = "No InterApp response received." };
                 }
 
-                return returnedMessage as InterAppResponse;
+                return returnedMessage;
             }
             catch (TimeoutException)
             {
