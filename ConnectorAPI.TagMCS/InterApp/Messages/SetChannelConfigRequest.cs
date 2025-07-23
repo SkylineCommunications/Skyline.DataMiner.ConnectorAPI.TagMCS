@@ -14,7 +14,7 @@
     public class SetChannelConfigRequest : Message
     {
         /// <summary>
-        /// The Channel Configuration to be set on TAG, if the uuid is null or empty, a new channel will be added
+        /// The Channel Configuration to be set on TAG
         /// </summary>
         public Channel Channel { get; set; }
     }
