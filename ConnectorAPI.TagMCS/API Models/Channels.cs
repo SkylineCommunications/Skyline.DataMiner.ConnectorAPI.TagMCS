@@ -20,6 +20,9 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 	{
 		[JsonProperty("data")]
 		public List<Channel> Data { get; set; }
+
+		[JsonProperty("metadata")]
+		public Metadata Metadata { get; set; }
 	}
 
 	public class Channel
