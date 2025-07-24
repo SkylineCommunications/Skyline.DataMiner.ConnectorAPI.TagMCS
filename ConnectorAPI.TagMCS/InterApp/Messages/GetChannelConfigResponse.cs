@@ -27,27 +27,5 @@
         /// The Channel Configuration requested, will be null in the case of a failed request
         /// </summary>
         public Channel Channel { get; set; }
-
-        /// <summary>
-        /// Constructor for a successful request
-        /// </summary>
-        /// <param name="channel"></param>
-        public GetChannelConfigResponse(Channel channel)
-        {
-            Channel = channel;
-            Success = true;
-            ResponseMessage = string.Empty;
-        }
-
-        /// <summary>
-        /// Constructor for a failed request
-        /// </summary>
-        /// <param name="responseMessage"></param>
-        public GetChannelConfigResponse(string responseMessage)
-        {
-            ResponseMessage = responseMessage;
-            Success = false;
-            Channel = null;
-        }
     }
 }
