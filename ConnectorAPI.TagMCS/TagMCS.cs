@@ -93,7 +93,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
         /// </summary>
         /// <param name="message">The message to send to the Tag MCS</param>
         /// <returns></returns>
-        public Message SendMessage(Message message, TimeSpan timeout)
+        public Message SendMessage(Message message, TimeSpan timeout, Action<string> logger = null)
         {
             try
             {
@@ -105,6 +105,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
                 Message returnedMessage = commands.Send(_connection, _element.AgentId, _element.Id, InterAppReceiverPid, timeout, KnownTypes).FirstOrDefault();
                 if (returnedMessage == null)
                 {
+                    logger?.Invoke("No InterApp Response received.");
                     return new InterAppResponse { Success = false, ResponseMessage = "No InterApp response received." };
                 }
 
@@ -112,10 +113,12 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
             }
             catch (TimeoutException)
             {
+                logger?.Invoke("Message Timed out...");
                 return new InterAppResponse { Success = false, ResponseMessage = "Message Timed out..." };
             }
             catch (Exception e)
             {
+                logger?.Invoke(e.ToString());
                 return new InterAppResponse { Success = false, ResponseMessage = e.ToString() };
             }
         }
