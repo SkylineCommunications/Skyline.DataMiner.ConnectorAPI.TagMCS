@@ -21,6 +21,6 @@
         /// <summary>
         /// The Channel Configuration requested, will be null in the case of a failed request
         /// </summary>
-        public Layout Channel { get; set; }
+        public Layout Layout { get; set; }
     }
 }
