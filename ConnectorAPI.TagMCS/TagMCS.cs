@@ -78,6 +78,9 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
             typeof(GetChannelConfigRequest),
             typeof(GetChannelConfigResponse),
             typeof(SetChannelConfigRequest),
+            typeof(SetLayoutConfigRequest),
+            typeof(GetLayoutConfigRequest),
+            typeof(GetLayoutConfigResponse),
         };
 
         /// <summary>
@@ -92,6 +95,8 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
         /// Send the message to the Tag MCS Element
         /// </summary>
         /// <param name="message">The message to send to the Tag MCS</param>
+        /// <param name="timeout">The time the interapp call will wait for a response.</param>
+        /// <param name="logger">A method for debugging the interapp calls.</param>
         /// <returns></returns>
         public Message SendMessage(Message message, TimeSpan timeout, Action<string> logger = null)
         {
