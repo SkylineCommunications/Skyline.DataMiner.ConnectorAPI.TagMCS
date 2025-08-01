@@ -20,11 +20,11 @@
         /// <summary>
         /// Constructor for the Get Channel Configuration Request
         /// </summary>
-        /// <param name="channel"></param>
+        /// <param name="layout"></param>
         /// <param name="messageIdentifier"></param>
-        public GetLayoutConfigRequest(string channel, MessageIdentifier messageIdentifier)
+        public GetLayoutConfigRequest(string layout, MessageIdentifier messageIdentifier)
         {
-            Layout = channel;
+            Layout = layout;
             MessageIdentifier = messageIdentifier;
         }
     }
