@@ -5,12 +5,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 {
     using System;
     using System.Collections.Generic;
-    using System.IO;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using Newtonsoft.Json;
-    using Skyline.DataMiner.Net.Messages.SLDataGateway;
 
     public class OutputEnableEncoder
     {

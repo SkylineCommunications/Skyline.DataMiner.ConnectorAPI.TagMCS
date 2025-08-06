@@ -4,13 +4,13 @@
     using Skyline.DataMiner.Core.InterAppCalls.Common.CallSingle;
 
     /// <summary>
-    /// Request to update a Layout Configuration on TAG
+    /// Request to update a Output Configuration on TAG
     /// </summary>
-    public class SetLayoutConfigRequest : Message
+    public class SetOutputConfigRequest : Message
     {
         /// <summary>
-        /// The Layout Configuration to be set on TAG
+        /// The Output Configuration to be set on TAG
         /// </summary>
-        public Layout Layout { get; set; }
+        public OutputData Output { get; set; }
     }
 }

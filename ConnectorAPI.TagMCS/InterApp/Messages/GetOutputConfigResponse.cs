@@ -4,9 +4,9 @@
     using Skyline.DataMiner.Core.InterAppCalls.Common.CallSingle;
 
     /// <summary>
-    /// Message containing the response for the Get Layout Config Request
+    /// Message containing the response for the Get Output Config Request
     /// </summary>
-    public class GetLayoutConfigResponse : Message
+    public class GetOutputConfigResponse : Message
     {
         /// <summary>
         /// Contains the boolean value on whether the request succeeded or not
@@ -19,8 +19,8 @@
         public string ResponseMessage { get; set; }
 
         /// <summary>
-        /// The Layout Configuration requested, will be null in the case of a failed request
+        /// The Output Configuration requested, will be null in the case of a failed request
         /// </summary>
-        public Layout Layout { get; set; }
+        public OutputData Output { get; set; }
     }
 }

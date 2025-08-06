@@ -18,7 +18,7 @@
         public MessageIdentifier MessageIdentifier { get; set; }
 
         /// <summary>
-        /// Constructor for the Get Channel Configuration Request
+        /// Constructor for the Get Layout Configuration Request
         /// </summary>
         /// <param name="layout"></param>
         /// <param name="messageIdentifier"></param>
