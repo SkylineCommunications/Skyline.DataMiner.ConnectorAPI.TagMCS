@@ -81,6 +81,9 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
             typeof(SetLayoutConfigRequest),
             typeof(GetLayoutConfigRequest),
             typeof(GetLayoutConfigResponse),
+            typeof(GetOutputConfigRequest),
+            typeof(GetOutputConfigResponse),
+            typeof(SetOutputConfigRequest),
         };
 
         /// <summary>
