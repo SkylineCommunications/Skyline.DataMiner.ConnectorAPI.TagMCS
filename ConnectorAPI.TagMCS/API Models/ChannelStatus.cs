@@ -189,6 +189,12 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 
         [JsonProperty("gop_size", NullValueHandling = NullValueHandling.Ignore)]
         public long? GopSize { get; set; }
+
+        [JsonProperty("children", NullValueHandling = NullValueHandling.Ignore)]
+        public List<Component> Children { get; set; }
+
+        [JsonProperty("parent_Pid", NullValueHandling = NullValueHandling.Ignore)]
+        public long? ParentPid { get; set; }
     }
 
     public class Dolby
