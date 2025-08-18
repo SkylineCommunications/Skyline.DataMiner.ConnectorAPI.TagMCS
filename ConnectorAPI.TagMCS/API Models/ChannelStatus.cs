@@ -101,7 +101,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
         public long Pid { get; set; }
 
         [JsonProperty("index")]
-        public long Index { get; set; }
+        public long? Index { get; set; }
 
         [JsonProperty("bitrate")]
         public long Bitrate { get; set; }
