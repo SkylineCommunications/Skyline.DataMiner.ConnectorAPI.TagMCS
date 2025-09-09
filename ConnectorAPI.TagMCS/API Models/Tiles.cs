@@ -33,16 +33,16 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
         public string ContentType { get; set; }
 
         [JsonProperty("min_width")]
-        public int MinWidth { get; set; }
+        public int? MinWidth { get; set; }
 
         [JsonProperty("min_height")]
-        public int MinHeight { get; set; }
+        public int? MinHeight { get; set; }
 
         [JsonProperty("default_width")]
-        public int DefaultWidth { get; set; }
+        public int? DefaultWidth { get; set; }
 
         [JsonProperty("default_height")]
-        public int DefaultHeight { get; set; }
+        public int? DefaultHeight { get; set; }
 
         [JsonProperty("description")]
         public string Description { get; set; }
@@ -78,7 +78,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
         public string Alignment { get; set; }
 
         [JsonProperty("index")]
-        public int Index { get; set; }
+        public int? Index { get; set; }
 
         [JsonProperty("crop")]
         public Crop Crop { get; set; }
@@ -96,7 +96,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
     public class Right
     {
         [JsonProperty("pixels")]
-        public int Pixels { get; set; }
+        public int? Pixels { get; set; }
 
         [JsonProperty("percentage")]
         public double? Percentage { get; set; }
@@ -105,7 +105,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
     public class Top
     {
         [JsonProperty("pixels")]
-        public int Pixels { get; set; }
+        public int? Pixels { get; set; }
 
         [JsonProperty("percentage")]
         public double? Percentage { get; set; }
@@ -114,7 +114,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
     public class Bottom
     {
         [JsonProperty("pixels")]
-        public int Pixels { get; set; }
+        public int? Pixels { get; set; }
 
         [JsonProperty("percentage")]
         public double? Percentage { get; set; }
@@ -138,7 +138,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
     public class Left
     {
         [JsonProperty("pixels")]
-        public int Pixels { get; set; }
+        public int? Pixels { get; set; }
 
         [JsonProperty("percentage")]
         public double? Percentage { get; set; }
