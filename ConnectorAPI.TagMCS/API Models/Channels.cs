@@ -63,7 +63,10 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 		[JsonProperty("config")]
 		public Config Config { get; set; }
 
-		[JsonProperty("receivers")]
+        [JsonProperty("groups")]
+        public List<string> Groups { get; set; }
+
+        [JsonProperty("receivers")]
 		public List<Receiver> Receivers { get; set; }
 
 		[JsonProperty("profiles")]
