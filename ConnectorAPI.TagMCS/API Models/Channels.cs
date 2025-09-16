@@ -63,7 +63,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 		[JsonProperty("config")]
 		public Config Config { get; set; }
 
-        [JsonProperty("groups")]
+        [JsonProperty("groups", NullValueHandling = NullValueHandling.Ignore)]
         public List<string> Groups { get; set; }
 
         [JsonProperty("receivers")]
@@ -90,7 +90,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 		[JsonProperty("st2038_mode")]
 		public string St2038Mode { get; set; }
 
-		[JsonProperty("tags")]
+		[JsonProperty("tags", NullValueHandling = NullValueHandling.Ignore)]
 		public List<string> Tags { get; set; }
 
 		[JsonProperty("unconfigured_components_behavior")]
