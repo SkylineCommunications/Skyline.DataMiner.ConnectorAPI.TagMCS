@@ -86,8 +86,17 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 		[JsonProperty("cloud_license")]
 		public string CloudLicense { get; set; }
 
-		[JsonProperty("license_server_host")]
-		public object LicenseServerHost { get; set; }
+        [JsonProperty("nielsen_monitoring_license", NullValueHandling = NullValueHandling.Ignore)]
+        public object NielsenMonitoringLicense { get; set; }
+
+        [JsonProperty("ssh_admin_password", NullValueHandling = NullValueHandling.Ignore)]
+        public object SshAdminPassword { get; set; }
+
+        [JsonProperty("ndi_discovery_servers", NullValueHandling = NullValueHandling.Ignore)]
+        public List<object> NdiDiscoveryServers { get; set; }
+
+        [JsonProperty("license_server_host")]
+		public List<object> LicenseServerHost { get; set; }
 
 		[JsonProperty("disable_http_access")]
 		public bool DisableHttpAccess { get; set; }
@@ -98,7 +107,10 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 		[JsonProperty("disable_ftps_access")]
 		public bool DisableFtpsAccess { get; set; }
 
-		[JsonProperty("groups", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("nmos", NullValueHandling = NullValueHandling.Ignore)]
+        public Nmos Nmos { get; set; }
+
+        [JsonProperty("groups", NullValueHandling = NullValueHandling.Ignore)]
 		public List<Group> Groups { get; set; }
 	}
 
@@ -111,7 +123,19 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 		public Metadata Metadata { get; set; }
 	}
 
-	public class DeviceInfoData
+    public class Nmos
+    {
+        [JsonProperty("registration_host")]
+        public object RegistrationHost { get; set; }
+
+        [JsonProperty("query_api_port")]
+        public object QueryApiPort { get; set; }
+
+        [JsonProperty("verify")]
+        public bool Verify { get; set; }
+    }
+
+    public class DeviceInfoData
 	{
 		[JsonProperty("uuid")]
 		public string Uuid { get; set; }
