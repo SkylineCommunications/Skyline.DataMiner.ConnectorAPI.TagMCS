@@ -331,7 +331,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
         [JsonProperty("gop_mode")]
         public string GopMode { get; set; }
 
-        [JsonProperty("hevc_latency_mode")]
+        [JsonProperty("hevc_latency_mode", NullValueHandling = NullValueHandling.Ignore)]
         public string HevcLatencyMode { get; set; }
 
         [JsonProperty("vbv_limit")]
@@ -342,9 +342,6 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 
         [JsonProperty("jxs_bitrate")]
         public string JxsBitrate { get; set; }
-
-        [JsonProperty("hevc_latency_mode", NullValueHandling = NullValueHandling.Ignore)]
-        public string HevcLatencyMode { get; set; }
     }
 
     public class OutputNetwork
