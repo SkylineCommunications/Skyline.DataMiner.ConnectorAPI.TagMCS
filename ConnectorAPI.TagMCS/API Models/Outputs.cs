@@ -64,8 +64,8 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
         [JsonProperty("stream")]
         public OutputStream Stream { get; set; }
 
-        [JsonProperty("groups")]
-        public List<Group> Groups { get; set; }
+        [JsonProperty("groups", NullValueHandling = NullValueHandling.Ignore)]
+        public List<string> Groups { get; set; }
     }
 
     public class Input

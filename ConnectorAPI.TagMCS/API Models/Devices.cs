@@ -42,7 +42,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 		public DateTime? Modified { get; set; }
 
         [JsonProperty("groups", NullValueHandling = NullValueHandling.Ignore)]
-        public List<Group> Groups { get; set; }
+        public List<string> Groups { get; set; }
 
         [JsonProperty("settings")]
 		public Settings Settings { get; set; }
