@@ -41,7 +41,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 		[JsonProperty("modified", NullValueHandling = NullValueHandling.Ignore)]
 		public DateTime? Modified { get; set; }
 
-        [JsonProperty("groups")]
+        [JsonProperty("groups", NullValueHandling = NullValueHandling.Ignore)]
         public List<Group> Groups { get; set; }
 
         [JsonProperty("settings")]
@@ -98,7 +98,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 		[JsonProperty("disable_ftps_access")]
 		public bool DisableFtpsAccess { get; set; }
 
-		[JsonProperty("groups")]
+		[JsonProperty("groups", NullValueHandling = NullValueHandling.Ignore)]
 		public List<Group> Groups { get; set; }
 	}
 

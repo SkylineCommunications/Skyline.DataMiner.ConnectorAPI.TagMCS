@@ -79,10 +79,10 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 
     public class OutputConfig
     {
-        [JsonProperty("audio_alarms")]
+        [JsonProperty("audio_alarms", NullValueHandling = NullValueHandling.Ignore)]
         public AudioAlarms AudioAlarms { get; set; }
 
-        [JsonProperty("audio_agent")]
+        [JsonProperty("audio_agent", NullValueHandling = NullValueHandling.Ignore)]
         public string AudioAgent { get; set; }
 
         [JsonProperty("show_alarms")]
