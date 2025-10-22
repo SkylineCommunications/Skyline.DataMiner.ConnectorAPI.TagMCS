@@ -41,7 +41,10 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 		[JsonProperty("modified", NullValueHandling = NullValueHandling.Ignore)]
 		public DateTime? Modified { get; set; }
 
-		[JsonProperty("settings")]
+        [JsonProperty("groups")]
+        public List<Group> Groups { get; set; }
+
+        [JsonProperty("settings")]
 		public Settings Settings { get; set; }
 
 		[JsonProperty("access")]

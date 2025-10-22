@@ -6,6 +6,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
     using System;
     using System.Collections.Generic;
     using Newtonsoft.Json;
+    using Skyline.DataMiner.Net.Notes;
 
     public class OutputEnableEncoder
     {
@@ -62,6 +63,9 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 
         [JsonProperty("stream")]
         public OutputStream Stream { get; set; }
+
+        [JsonProperty("groups")]
+        public List<Group> Groups { get; set; }
     }
 
     public class Input
@@ -75,6 +79,9 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 
     public class OutputConfig
     {
+        [JsonProperty("audio_alarms")]
+        public AudioAlarms AudioAlarms { get; set; }
+
         [JsonProperty("audio_agent")]
         public string AudioAgent { get; set; }
 
@@ -89,6 +96,84 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 
         [JsonProperty("layout_change_interval")]
         public string LayoutChangeInterval { get; set; }
+    }
+
+    public class AudioAlarms
+    {
+        [JsonProperty("duration")]
+        public string Duration { get; set; }
+
+        [JsonProperty("critical")]
+        public Critical Critical { get; set; }
+
+        [JsonProperty("major")]
+        public Major Major { get; set; }
+
+        [JsonProperty("minor")]
+        public Minor Minor { get; set; }
+
+        [JsonProperty("warning")]
+        public Warning Warning { get; set; }
+
+        [JsonProperty("notice")]
+        public Notice Notice { get; set; }
+
+        [JsonProperty("info")]
+        public Info Info { get; set; }
+    }
+
+    public class Critical
+    {
+        [JsonProperty("enabled")]
+        public bool Enabled { get; set; }
+
+        [JsonProperty("file")]
+        public string File { get; set; }
+    }
+
+    public class Major
+    {
+        [JsonProperty("enabled")]
+        public bool Enabled { get; set; }
+
+        [JsonProperty("file")]
+        public string File { get; set; }
+    }
+
+    public class Minor
+    {
+        [JsonProperty("enabled")]
+        public bool Enabled { get; set; }
+
+        [JsonProperty("file")]
+        public string File { get; set; }
+    }
+
+    public class Warning
+    {
+        [JsonProperty("enabled")]
+        public bool Enabled { get; set; }
+
+        [JsonProperty("file")]
+        public string File { get; set; }
+    }
+
+    public class Notice
+    {
+        [JsonProperty("enabled")]
+        public bool Enabled { get; set; }
+
+        [JsonProperty("file")]
+        public string File { get; set; }
+    }
+
+    public class Info
+    {
+        [JsonProperty("enabled")]
+        public bool Enabled { get; set; }
+
+        [JsonProperty("file")]
+        public string File { get; set; }
     }
 
     public class Processing
@@ -245,6 +330,9 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 
         [JsonProperty("gop_mode")]
         public string GopMode { get; set; }
+
+        [JsonProperty("hevc_latency_mode")]
+        public string HevcLatencyMode { get; set; }
 
         [JsonProperty("vbv_limit")]
         public string VbvLimit { get; set; }
