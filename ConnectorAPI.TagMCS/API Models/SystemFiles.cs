@@ -23,11 +23,11 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 		[JsonProperty("uuid")]
 		public string Uuid { get; set; }
 
-		[JsonProperty("filename")]
-		public string Filename { get; set; }
+        [JsonProperty("label")]
+        public string Label { get; set; }
 
-		[JsonProperty("ext")]
-		public string Ext { get; set; }
+        [JsonProperty("ext")]
+		public string Extension { get; set; }
 
 		[JsonProperty("size")]
 		public int Size { get; set; }
@@ -38,7 +38,10 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 		[JsonProperty("modified")]
 		public DateTime Modified { get; set; }
 
-		[JsonProperty("attributes")]
+        [JsonProperty("note")]
+        public string Note { get; set; }
+
+        [JsonProperty("attributes")]
 		public FileAttributes Attributes { get; set; }
 	}
 
