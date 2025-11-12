@@ -11,18 +11,24 @@
     public class UpdateChannelRequest : Message
     {
         /// <summary>
-        /// The ID of the Channel
+        /// The ID or Name of the Channel depending on the MessageIdentifier
         /// </summary>
         public string Channel { get; set; }
 
+        /// <summary>
+        /// The type of information to be expected in Channel, ID for the id, Name for the name
+        /// </summary>
+        public MessageIdentifier MessageIdentifier { get; set; }
 
         /// <summary>
         /// Constructor for the Get Channel Configuration Request
         /// </summary>
         /// <param name="channel"></param>
-        public UpdateChannelRequest(string channel)
+        /// <param name="messageIdentifier"></param>
+        public UpdateChannelRequest(string channel, MessageIdentifier messageIdentifier)
         {
             Channel = channel;
+            MessageIdentifier = messageIdentifier;
         }
     }
 }
