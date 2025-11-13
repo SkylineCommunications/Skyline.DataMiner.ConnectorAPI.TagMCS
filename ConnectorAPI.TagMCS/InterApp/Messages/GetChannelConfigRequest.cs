@@ -1,10 +1,5 @@
 ﻿namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.InterApp.Messages
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using Skyline.DataMiner.Core.InterAppCalls.Common.CallSingle;
 
     /// <summary>

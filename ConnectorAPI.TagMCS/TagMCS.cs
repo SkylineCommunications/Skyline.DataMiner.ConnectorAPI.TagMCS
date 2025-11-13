@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.InterApp.Messages;
-using Skyline.DataMiner.Core.DataMinerSystem.Common;
-using Skyline.DataMiner.Core.InterAppCalls.Common.CallBulk;
-using Skyline.DataMiner.Core.InterAppCalls.Common.CallSingle;
-using Skyline.DataMiner.Core.InterAppCalls.Common.Shared;
-using Skyline.DataMiner.Net;
-
-namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
+﻿namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.InterApp.Messages;
+    using Skyline.DataMiner.Core.DataMinerSystem.Common;
+    using Skyline.DataMiner.Core.InterAppCalls.Common.CallBulk;
+    using Skyline.DataMiner.Core.InterAppCalls.Common.CallSingle;
+    using Skyline.DataMiner.Core.InterAppCalls.Common.Shared;
+    using Skyline.DataMiner.Net;
+
     /// <summary>
     /// Enum for specifying what type of information the message will contain.
     /// </summary>

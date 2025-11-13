@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Skyline.DataMiner.Core.InterAppCalls.Common.CallSingle;
-
-namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.InterApp.Messages
+﻿namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.InterApp.Messages
 {
+    using Skyline.DataMiner.Core.InterAppCalls.Common.CallSingle;
+
     /// <summary>
     /// Basic InterApp Response containing the Success of the request and a Response Message containing any additional information
     /// </summary>
