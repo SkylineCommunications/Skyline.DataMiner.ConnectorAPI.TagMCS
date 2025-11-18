@@ -88,14 +88,6 @@
         };
 
         /// <summary>
-		///     List of which executor needs to handle which type of message.<br />
-		///     Required under the hood to correctly handle the communication.
-		/// </summary>
-        public static Dictionary<Type, Type> ExecutorMapping { get; } = new Dictionary<Type, Type>
-        {
-        };
-
-        /// <summary>
         /// Send the message to the Tag MCS Element
         /// </summary>
         /// <param name="message">The message to send to the Tag MCS</param>
