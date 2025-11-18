@@ -2,6 +2,7 @@
 namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 {
 	using System.Collections.Generic;
+
 	using Newtonsoft.Json;
 
 	public class SystemConfig

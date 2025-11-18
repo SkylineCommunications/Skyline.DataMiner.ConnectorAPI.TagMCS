@@ -2,13 +2,12 @@
 #pragma warning disable CS1591 // XML Comments
 namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 {
-	using System;
-	using System.Collections.Generic;
-	using System.ComponentModel;
-	using Newtonsoft.Json;
-	using Skyline.DataMiner.Net.Messages.SLDataGateway;
+    using System;
+    using System.Collections.Generic;
 
-	public class Access
+    using Newtonsoft.Json;
+
+    public class Access
 	{
 		public Access(string url, string username, string password)
 		{

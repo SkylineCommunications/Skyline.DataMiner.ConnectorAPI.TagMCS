@@ -1,10 +1,9 @@
 ﻿#pragma warning disable CS1591 // XML Comments
 namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 {
-	using System;
-	using Newtonsoft.Json;
+    using Newtonsoft.Json;
 
-	public class SystemStatus
+    public class SystemStatus
 	{
 		[JsonProperty("data")]
 		public SystemDatum[] Data { get; set; }

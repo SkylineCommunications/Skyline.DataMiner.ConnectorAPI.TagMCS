@@ -2,6 +2,7 @@
 namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.HelperClasses
 {
 	using System;
+
 	using Newtonsoft.Json;
 	using Newtonsoft.Json.Linq;
 
