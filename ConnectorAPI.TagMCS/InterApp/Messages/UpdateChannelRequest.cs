@@ -2,10 +2,7 @@
 {
     using Skyline.DataMiner.Core.InterAppCalls.Common.CallSingle;
 
-    /// <summary>
-    /// Message to Get the Channel Configuration for a specific channel on TAG
-    /// </summary>
-    public class GetChannelConfigRequest : Message
+    public class UpdateChannelRequest : Message
     {
         /// <summary>
         /// The ID or Name of the Channel depending on the MessageIdentifier
@@ -22,7 +19,7 @@
         /// </summary>
         /// <param name="channel"></param>
         /// <param name="messageIdentifier"></param>
-        public GetChannelConfigRequest(string channel, MessageIdentifier messageIdentifier)
+        public UpdateChannelRequest(string channel, MessageIdentifier messageIdentifier)
         {
             Channel = channel;
             MessageIdentifier = messageIdentifier;

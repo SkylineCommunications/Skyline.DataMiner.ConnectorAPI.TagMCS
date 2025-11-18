@@ -19,7 +19,7 @@
     <Company>Skyline Communications</Company>
     <Description>This solution holds the connector API (Inter-App Calls and Messages) to communicate with any DataMiner element running the 'TAG Video Systems Media Control System(MCS)' connector.</Description>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/SkylineCommunications/SLC-S-TAG-MCS-ConnectorAPI</RepositoryUrl>
+    <RepositoryUrl>https://github.com/SkylineCommunications/Skyline.DataMiner.ConnectorAPI.TagMCS</RepositoryUrl>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
 
@@ -30,8 +30,11 @@
   </ItemGroup>
   
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="Skyline.DataMiner.Core.DataMinerSystem.Common" Version="1.1.3.6" />
     <PackageReference Include="Skyline.DataMiner.Core.InterAppCalls.Common" Version="1.0.1.1" />
-    <PackageReference Include="Skyline.DataMiner.Utils.SecureCoding.Analyzers" Version="2.0.4">
+    <PackageReference Include="Skyline.DataMiner.Dev.Common" Version="10.4.3.2" />
+    <PackageReference Include="Skyline.DataMiner.Utils.SecureCoding.Analyzers" Version="2.2.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
