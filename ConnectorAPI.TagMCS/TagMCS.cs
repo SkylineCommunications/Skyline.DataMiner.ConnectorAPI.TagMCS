@@ -85,6 +85,7 @@
             typeof(GetOutputConfigRequest),
             typeof(GetOutputConfigResponse),
             typeof(SetOutputConfigRequest),
+            typeof(UpdateChannelRequest),
         };
 
         /// <summary>
