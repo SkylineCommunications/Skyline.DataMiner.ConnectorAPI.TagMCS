@@ -54,7 +54,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 		public bool? RecordingEnabled { get; set; }
 
 		[JsonProperty("fingerprinting_enabled")]
-		public bool? FingerprintigEnabled { get; set; }
+		public bool? FingerprintingEnabled { get; set; }
 
 		[JsonProperty("descrambling_enabled")]
 		public bool? DescramblingEnabled { get; set; }
