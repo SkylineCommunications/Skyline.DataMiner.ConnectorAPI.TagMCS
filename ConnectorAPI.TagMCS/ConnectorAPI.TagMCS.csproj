@@ -19,7 +19,7 @@
     <Company>Skyline Communications</Company>
     <Description>This solution holds the connector API (Inter-App Calls and Messages) to communicate with any DataMiner element running the 'TAG Video Systems Media Control System(MCS)' connector.</Description>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/SkylineCommunications/SLC-S-TAG-MCS-ConnectorAPI</RepositoryUrl>
+    <RepositoryUrl>https://github.com/SkylineCommunications/Skyline.DataMiner.ConnectorAPI.TagMCS</RepositoryUrl>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
 
