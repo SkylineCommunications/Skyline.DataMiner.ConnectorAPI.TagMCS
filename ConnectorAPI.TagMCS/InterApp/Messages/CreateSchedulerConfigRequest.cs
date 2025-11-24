@@ -14,6 +14,6 @@
         /// <summary>
         /// Gets or sets the scheduler configuration to be created.
         /// </summary>
-        public SchedulerConfig SchedulerConfig { get; set; }
+        public SchedulerConfigRequest SchedulerConfig { get; set; }
     }
 }
