@@ -21,6 +21,6 @@
         /// <summary>
         /// Contains the scheduler configuration that was created
         /// </summary>
-        public SchedulerConfig SchedulerConfig { get; set; }
+        public SingleSchedulerConfigurations SingleSchedulerConfigurations { get; set; }
     }
 }
