@@ -86,6 +86,7 @@
             typeof(GetOutputConfigResponse),
             typeof(SetOutputConfigRequest),
             typeof(UpdateChannelRequest),
+            typeof(CreateSchedulerConfigRequest),
         };
 
         /// <summary>
