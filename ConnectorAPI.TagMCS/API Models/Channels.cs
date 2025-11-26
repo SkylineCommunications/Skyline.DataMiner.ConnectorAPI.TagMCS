@@ -231,7 +231,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 		public bool Enabled { get; set; }
 
 		[JsonProperty("program_number")]
-		public string ProgramNumber { get; set; }
+		public object ProgramNumber { get; set; }
 
 		[JsonProperty("attributes")]
 		public ReceiverAttributes Attributes { get; set; }
