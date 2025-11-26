@@ -41,6 +41,9 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 
         [JsonProperty("attributes")]
         public PenaltyBoxAttributes Attributes { get; set; }
+
+        [JsonProperty("groups")]
+        public List<string> Groups { get; set; }
     }
 
     public class PenaltyBoxDestination
