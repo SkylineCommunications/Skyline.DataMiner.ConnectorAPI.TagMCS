@@ -48,7 +48,13 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 		[JsonProperty("layout_type")]
 		public string LayoutType { get; set; }
 
-		[JsonProperty("tiles")]
+        [JsonProperty("tags", NullValueHandling = NullValueHandling.Ignore)]
+        public List<string> Tags { get; set; }
+
+        [JsonProperty("groups", NullValueHandling = NullValueHandling.Ignore)]
+        public List<string> Groups { get; set; }
+
+        [JsonProperty("tiles")]
 		public List<Tile> Tiles { get; set; }
 	}
 
