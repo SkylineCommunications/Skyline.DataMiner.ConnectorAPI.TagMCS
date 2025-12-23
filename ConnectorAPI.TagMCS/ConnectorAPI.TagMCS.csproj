@@ -30,7 +30,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Skyline.DataMiner.Core.InterAppCalls.Common" Version="1.0.1.1" />
     <PackageReference Include="Skyline.DataMiner.Dev.Common" Version="10.4.3.2" />
     <PackageReference Include="Skyline.DataMiner.Utils.SecureCoding.Analyzers" Version="2.2.1">
