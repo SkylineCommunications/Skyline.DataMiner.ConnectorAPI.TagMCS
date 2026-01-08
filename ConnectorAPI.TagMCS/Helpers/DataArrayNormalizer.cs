@@ -32,25 +32,27 @@
 
             if (!obj.TryGetValue("data", out var dataToken) || dataToken == null || dataToken.Type == JTokenType.Null)
             {
-                return Wrap(obj).ToString(Formatting.None);
+                return Wrap(obj).ToString(Formatting.None, Array.Empty<JsonConverter>());
             }
 
-            if (dataToken.Type == JTokenType.Array)
+            if (token.Type == JTokenType.Array)
             {
-                return obj.ToString(Formatting.None);
+                return token.ToString(Formatting.None, Array.Empty<JsonConverter>());
             }
 
             obj["data"] = new JArray(dataToken);
 
-            return obj.ToString(Formatting.None);
+            return obj.ToString(Formatting.None, Array.Empty<JsonConverter>());
         }
 
         private static JObject Wrap(JToken token)
         {
-            return new JObject
+            if (token.Type == JTokenType.Array)
             {
-                ["data"] = new JArray(token)
-            };
+                return new JObject { ["data"] = token };
+            }
+
+            return new JObject { ["data"] = new JArray(token) };
         }
     }
 
