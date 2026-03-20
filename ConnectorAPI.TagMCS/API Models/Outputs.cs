@@ -243,6 +243,9 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 
         [JsonProperty("compression")]
         public Compression Compression { get; set; }
+
+        [JsonProperty("color_format")]
+        public string ColorFormat { get; set; }
     }
 
     public class Packaging
