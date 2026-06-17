@@ -188,6 +188,11 @@
         OutputsStatus_5900 = 5900,
 
         /// <summary>
+        /// Outputs thumbnails endpoint (5901).
+        /// </summary>
+        OutputThumbnails_5901 = 5901,
+
+        /// <summary>
         /// Thresholds configuration metadata endpoint (6100).
         /// </summary>
         ThresholdsConfigMeta_6100 = 6100,
