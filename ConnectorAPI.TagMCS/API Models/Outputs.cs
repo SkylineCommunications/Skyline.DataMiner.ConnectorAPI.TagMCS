@@ -451,4 +451,25 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
         [JsonProperty("thumb")]
         public string Thumb { get; set; }
     }
+
+    public class OutputStatusThumbnails
+    {
+        [JsonProperty("data")]
+        public List<OutputThumbnail> Data { get; set; }
+
+        [JsonProperty("metadata")]
+        public Metadata Metadata { get; set; }
+    }
+
+    public class OutputThumbnail
+    {
+        [JsonProperty("uuid")]
+        public string Uuid { get; set; }
+
+        [JsonProperty("thumb")]
+        public string Thumb { get; set; }
+
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+    }
 }
