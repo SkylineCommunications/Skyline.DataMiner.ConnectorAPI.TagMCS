@@ -448,11 +448,14 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 	public class Total
 	{
 		[JsonProperty("limit")]
-		public int? Limit { get; set; }
+		public double? Limit { get; set; }
 
 		[JsonProperty("used")]
 		public double? Used { get; set; }
-	}
+
+        [JsonProperty("dynamic")]
+        public double? Dynamic { get; set; }
+    }
 
 	public class Uncompressed
 	{
