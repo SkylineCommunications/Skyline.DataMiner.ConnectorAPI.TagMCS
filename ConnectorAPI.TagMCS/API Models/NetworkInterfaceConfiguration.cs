@@ -1,4 +1,5 @@
-﻿namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
+﻿#pragma warning disable CS1591 // XML Comments
+namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 {
     using System;
     using System.Collections.Generic;
