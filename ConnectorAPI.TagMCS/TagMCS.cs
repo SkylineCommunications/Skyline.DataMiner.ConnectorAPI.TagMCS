@@ -216,6 +216,16 @@
         /// Penalty box configuration endpoint (7200).
         /// </summary>
         PenaltyBoxConfig_7200 = 7200,
+
+        /// <summary>
+        /// Get Network Interfaces Configuration (7500)
+        /// </summary>
+        NetworkInterfacesConfiguration_7500 = 7500,
+
+        /// <summary>
+        /// Get Network Interfaces Status (7501)
+        /// </summary>
+        NetworkInterfacesStatus_7501 = 7501,
     }
 
     /// <summary>
