@@ -14,6 +14,15 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
         public StatusMetadata Metadata { get; set; }
     }
 
+    public class ChannelThumbnailsBulk
+    {
+        [JsonProperty("data")]
+        public ThumbnailData[] Data { get; set; }
+
+        [JsonProperty("metadata")]
+        public StatusMetadata Metadata { get; set; }
+    }
+
     public class ThumbnailData
     {
         [JsonProperty("uuid")]
