@@ -36,7 +36,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
         public string Gateway { get; set; }
 
         [JsonProperty("speed")]
-        public int? Speed { get; set; }
+        public long? Speed { get; set; }
 
         [JsonProperty("mac")]
         public string Mac { get; set; }
@@ -60,13 +60,13 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
         public bool? Up { get; set; }
 
         [JsonProperty("rx_multicast_bandwidth")]
-        public int? RxMulticastBandwidth { get; set; }
+        public long? RxMulticastBandwidth { get; set; }
 
         [JsonProperty("tx_bandwidth")]
-        public int? TxBandwidth { get; set; }
+        public long? TxBandwidth { get; set; }
 
         [JsonProperty("rx_bandwidth")]
-        public int? RxBandwidth { get; set; }
+        public long? RxBandwidth { get; set; }
     }
 
     public class NetworkInterfaceStatus
