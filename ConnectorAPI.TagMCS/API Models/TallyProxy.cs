@@ -17,7 +17,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.API_Models
 	}
 
 	/// <summary>
-	/// Wrapper for a single-entry PUT /tally/proxy/:label request/response ("data" is an object, not an array).
+	/// Wrapper for a single-entry PUT /tally/proxy/:label request/response.
 	/// </summary>
 	public class TallyProxySingle
 	{

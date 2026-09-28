@@ -6,7 +6,7 @@ namespace Skyline.DataMiner.ConnectorAPI.TAGVideoSystems.MCS.InterApp.Messages
     /// <summary>
     /// InterApp request to create or update a Tally Proxy entry. The executor decides whether to POST
     /// (create, when no matching entry exists yet) or PUT (update, when one already does) against the
-    /// TAG MCS API, mirroring the same "upsert" semantics already used by the driver's own UI form.
+    /// TAG MCS API.
     /// </summary>
     public class AddOrUpdateTallyProxyRequest : Message
 	{
