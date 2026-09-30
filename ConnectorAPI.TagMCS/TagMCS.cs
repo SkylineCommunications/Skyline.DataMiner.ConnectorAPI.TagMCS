@@ -226,6 +226,11 @@
         /// Get Network Interfaces Status (7501)
         /// </summary>
         NetworkInterfacesStatus_7501 = 7501,
+
+        /// <summary>
+        /// Tally proxy endpoint (7600).
+        /// </summary>
+        TallyProxy_7600 = 7600,
     }
 
     /// <summary>
@@ -292,6 +297,7 @@
             typeof(UpdateChannelRequest),
             typeof(CreateSchedulerConfigRequest),
             typeof(CreateSchedulerConfigResponse),
+            typeof(AddOrUpdateTallyProxyRequest),
         };
 
         /// <summary>
